@@ -6,10 +6,10 @@ https://mybinder.org/v2/gh/btel/binder-tensorboard/master?urlpath=%2fproxy%2f600
 
 Once the tensorboard is launched you can also see the notebooks by replacing the /proxy/6006/ part of the URL (or everything after `/proxy`) with `/tree` (or `/lab` for jupyter lab view).
 
-When you run the notebook you can see the progress of the run live! You can see it either in a separate tab of your browser or the embedded view in the notebook.
+When you run the notebook you can see the progress of the run live! You can watch in a separate browser tab.
 
 ## How?
 
-tensorboard launches a webserver on a given port (by default 6006). In many environments (like dokerized deployments), the port is not visible in the external network. To expose, we use the jupyter-proxy-extension to proxy it to the jupyter server url (`/proxy/6006`)
+tensorboard launches a webserver on a given port (by default 6006). In many environments (like dokerized deployments), the port is not visible in the external network. To expose it, we use the jupyter-proxy-extension to proxy it to the jupyter server url (`/proxy/6006`)
 
 The `tensorboardserverextension.py` file, which is run by jupyter server on start up, is responsible for launching the tensorboard server.
