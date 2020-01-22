@@ -10,13 +10,13 @@ https://mybinder.org/v2/gh/btel/binder-tensorboard/master?urlpath=%2fproxy%2f600
 
 This example shows how to:
 
-* expose [tensorboard](https://www.tensorflow.org/tensorboard/) interface on
+* expose the [tensorboard](https://www.tensorflow.org/tensorboard/) interface on
   binder,
-* use
+* use the
   [jupyter-server-proxy](https://github.com/jupyterhub/jupyter-server-proxy)
   extension to map a web application running on a port inaccessible from the
   internet (6006 for example) to jupyter path (`/proxy/6006/`),
-* launch tensorboard on startup using custom server extension
+* launch tensorboard on startup using the custom server extension
   (`tensorboardserverextension.py`).
 
 ## Notes
@@ -31,7 +31,7 @@ progress of the run live (you can keep tensorboard open in a separate tab).
 ## How?
 
 tensorboard launches a webserver on a given port (by default 6006). In many
-environments (like dokerized deployments), the port is not visible in the
+environments (like dockerized deployments), the port is not visible in the
 external network. To expose it, we use the jupyter-servery-proxy extension to proxy it
 to the jupyter server URL (`/proxy/6006/`, mind the [trailing
 slash](https://github.com/jupyterhub/jupyter-server-proxy/issues/41`)!)
