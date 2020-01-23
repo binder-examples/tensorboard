@@ -34,7 +34,7 @@ tensorboard launches a webserver on a given port (by default 6006). In many
 environments (like dockerized deployments), the port is not visible in the
 external network. To expose it, we use the jupyter-servery-proxy extension to proxy it
 to the jupyter server URL (`/proxy/6006/`, mind the [trailing
-slash](https://github.com/jupyterhub/jupyter-server-proxy/issues/41`)!)
+slash](https://github.com/jupyterhub/jupyter-server-proxy/issues/41)!)
 
 The `tensorboardserverextension.py` file, which is executed by jupyter server on
 start up, launches the tensorboard server.
